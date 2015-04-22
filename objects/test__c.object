@@ -51,9 +51,9 @@
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
     <fields>
-        <fullName>New_Field__c</fullName>
+        <fullName>New_Field_2__c</fullName>
         <externalId>false</externalId>
-        <label>New Field</label>
+        <label>New Field 2</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
