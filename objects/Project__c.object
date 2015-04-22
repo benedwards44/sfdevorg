@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>ProjectNew</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>EcoDesignLanding</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Calculated_GHG_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+	Calculated_GHG__c &gt; 0.8, 
+	IMAGE(&quot;/img/samples/color_red.gif&quot;, &quot;red&quot;, 15, Calculated_GHG__c * 100) &amp; 
+		IMAGE(&quot;/s.gif&quot;, &quot;white&quot;, 15, 100 - (Calculated_GHG__c * 100)
+	), 
+	IF(
+		Calculated_GHG__c &gt; 0.5, 
+		IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;yellow&quot;, 15, Calculated_GHG__c * 100) &amp; 
+			IMAGE(&quot;/s.gif&quot;, &quot;white&quot;, 15, 100 - (Calculated_GHG__c * 100 )
+		), 
+		IF(
+			Calculated_GHG__c &gt; 0, 
+			IMAGE(&quot;/img/samples/color_green.gif&quot;, &quot;green&quot;, 15, Calculated_GHG__c * 100) &amp; 
+				IMAGE(&quot;/s.gif&quot;, &quot;white&quot;, 15, 100 - (Calculated_GHG__c * 100)
+			), 
+			&quot;&quot;
+		)
+))</formula>
+        <label>Calculated GHG %</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculated_GHG__c</fullName>
+        <externalId>false</externalId>
+        <label>Calculated GHG %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Calculated_Waste_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+	Calculated_Waste__c &gt; 0.8, 
+	IMAGE(&quot;/img/samples/color_red.gif&quot;, &quot;red&quot;, 15, Calculated_Waste__c * 100) &amp; 
+		IMAGE(&quot;/s.gif&quot;, &quot;white&quot;, 15, 100 - (Calculated_Waste__c * 100)
+	), 
+	IF(
+		Calculated_Waste__c &gt; 0.5, 
+		IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;yellow&quot;, 15, Calculated_Waste__c * 100) &amp; 
+			IMAGE(&quot;/s.gif&quot;, &quot;white&quot;, 15, 100 - (Calculated_Waste__c * 100 )
+		), 
+		IF(
+			Calculated_Waste__c &gt; 0, 
+			IMAGE(&quot;/img/samples/color_green.gif&quot;, &quot;green&quot;, 15, Calculated_Waste__c * 100) &amp; 
+				IMAGE(&quot;/s.gif&quot;, &quot;white&quot;, 15, 100 - (Calculated_Waste__c * 100)
+			), 
+			&quot;&quot;
+		)
+))</formula>
+        <label>Calculated Waste %</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculated_Waste__c</fullName>
+        <externalId>false</externalId>
+        <label>Calculated Waste %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Calculated_Water_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+	Calculated_Water__c &gt; 0.8, 
+	IMAGE(&quot;/img/samples/color_red.gif&quot;, &quot;red&quot;, 15, Calculated_Water__c * 100) &amp; 
+		IMAGE(&quot;/s.gif&quot;, &quot;white&quot;, 15, 100 - (Calculated_Water__c * 100)
+	), 
+	IF(
+		Calculated_Water__c &gt; 0.5, 
+		IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;yellow&quot;, 15, Calculated_Water__c * 100) &amp; 
+			IMAGE(&quot;/s.gif&quot;, &quot;white&quot;, 15, 100 - (Calculated_Water__c * 100 )
+		), 
+		IF(
+			Calculated_Water__c &gt; 0, 
+			IMAGE(&quot;/img/samples/color_green.gif&quot;, &quot;green&quot;, 15, Calculated_Water__c * 100) &amp; 
+				IMAGE(&quot;/s.gif&quot;, &quot;white&quot;, 15, 100 - (Calculated_Water__c * 100)
+			), 
+			&quot;&quot;
+		)
+))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Calculated Water %</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculated_Water__c</fullName>
+        <externalId>false</externalId>
+        <label>Calculated Water %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Foods</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Homecare</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Refreshment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Countries__c</fullName>
+        <externalId>false</externalId>
+        <label>Countries</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Countries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IPM_Project_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>IPM Project Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Launch_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Launch Year</label>
+        <picklist>
+            <picklistValues>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2021</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2022</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.FirstName &amp; &quot; &quot; &amp;  Owner:User.LastName</formula>
+        <label>Project Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Ideas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feasibility</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Capability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Market Ready</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Market Deployment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Post Launch Evaluation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub-Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Beverages</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deodorants</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dressings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hair</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Household Cleaning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ice Cream</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Laundry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Savoury</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Skin</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spreads</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Team_Members__c</fullName>
+        <externalId>false</externalId>
+        <label>Team Members</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Robbi Whitner  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Johnny Lach  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tanna Trump  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yevette Fraser  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Domenica Myrick  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jay Friley  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yang Valtierra  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ardelia Schock  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lavonda Sabo  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shonna Herbert  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shavonda Winfrey  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alline Depaola  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deidra Mealy  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gisele Russi  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Zena Dehner  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Darlena Murrill  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Angelique Beckel  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dyan Shotwell  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lilliana Ballas  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stephine Johnsrud  </fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <label>Project</label>
+    <listViews>
+        <fullName>AllProjects</fullName>
+        <columns>NAME</columns>
+        <columns>Category__c</columns>
+        <columns>Sub_Category__c</columns>
+        <columns>Project_Stage__c</columns>
+        <columns>Project_Owner__c</columns>
+        <columns>Calculated_GHG_Formula__c</columns>
+        <columns>Calculated_Waste_Formula__c</columns>
+        <columns>Calculated_Water_Formula__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Foods_Projects</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Personal Care</value>
+        </filters>
+        <label>Foods Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Foods_Projects1</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Personal Care,Refreshment</value>
+        </filters>
+        <label>Refreshment Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Foods_Projects2</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Stage__c</field>
+            <operation>equals</operation>
+            <value>Market Deployment</value>
+        </filters>
+        <label>Market Ready Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Foods_Projects3</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Stage__c</field>
+            <operation>equals</operation>
+            <value>Feasibility</value>
+        </filters>
+        <label>Feasibility Stage Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Homecare_Projects</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Homecare</value>
+        </filters>
+        <label>Homecare Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Projects</fullName>
+        <columns>NAME</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Personal_Care_Projects</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Personal Care</value>
+        </filters>
+        <label>Personal Care Projects</label>
+    </listViews>
+    <nameField>
+        <label>Project Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Projects</pluralLabel>
+    <recordTypeTrackFeedHistory>true</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Simplified</fullName>
+        <active>true</active>
+        <description>Simplified version of the Eco-Design tool</description>
+        <label>Simplified</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Foods</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homecare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refreshment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Countries__c</picklist>
+            <values>
+                <fullName>Countries</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Launch_Year__c</picklist>
+            <values>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2022</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_Stage__c</picklist>
+            <values>
+                <fullName>Capability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feasibility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ideas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Deployment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Ready</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Launch Evaluation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Category__c</picklist>
+            <values>
+                <fullName>Beverages</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deodorants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dressings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Household Cleaning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ice Cream</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laundry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Savoury</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Skin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spreads</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Team_Members__c</picklist>
+            <values>
+                <fullName>Alline Depaola %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Angelique Beckel %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ardelia Schock %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Darlena Murrill %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deidra Mealy %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Domenica Myrick %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dyan Shotwell %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gisele Russi %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jay Friley %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Johnny Lach %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lavonda Sabo %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lilliana Ballas %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Robbi Whitner %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shavonda Winfrey %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shonna Herbert %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stephine Johnsrud %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tanna Trump %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yang Valtierra %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yevette Fraser %C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zena Dehner %C2%A0</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
