@@ -61,6 +61,28 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Picklist__c</fullName>
+        <externalId>false</externalId>
+        <label>Picklist</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Value D</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value E</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value F</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>String__c</fullName>
         <defaultValue>&quot;HELLO&quot;</defaultValue>
         <externalId>false</externalId>
