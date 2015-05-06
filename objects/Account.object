@@ -816,67 +816,7 @@
         <errorMessage>Test validation</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>Validation_Rule_11</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_12</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_13</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_14</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_15</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_16</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_17</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_18</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_19</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
         <fullName>Validation_Rule_2</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_20</fullName>
         <active>true</active>
         <errorConditionFormula>TRUE</errorConditionFormula>
         <errorMessage>Test validation</errorMessage>
