@@ -122,4 +122,5 @@
         <searchResultsAdditionalFields>Discount</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>GrandTotal</searchResultsAdditionalFields>
     </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

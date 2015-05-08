@@ -36,14 +36,17 @@
     <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>AccountId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ContactId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Product2Id</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -82,6 +85,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <listViews>
@@ -112,4 +116,5 @@
         <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CONTACT.NAME</searchResultsAdditionalFields>
     </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>
