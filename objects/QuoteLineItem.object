@@ -34,5 +34,4 @@
         <fullName>QuoteId</fullName>
         <type>MasterDetail</type>
     </fields>
-    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>
