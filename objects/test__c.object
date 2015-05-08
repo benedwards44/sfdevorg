@@ -83,6 +83,15 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Rich_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Rich Text</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
         <fullName>String__c</fullName>
         <defaultValue>&quot;HELLO&quot;</defaultValue>
         <externalId>false</externalId>
