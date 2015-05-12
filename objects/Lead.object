@@ -290,6 +290,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>PartnerAccountId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Primary__c</fullName>
         <externalId>false</externalId>
         <label>Primary</label>
