@@ -468,6 +468,16 @@
     </searchLayouts>
     <sharingModel>ReadWriteTransfer</sharingModel>
     <webLinks>
+        <fullName>Address_Autocomplete</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Address Autocomplete</masterLabel>
+        <openType>replace</openType>
+        <page>AddressAutocompleteLead</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
         <fullName>SDOC__Email_Docs</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
@@ -510,5 +520,17 @@ mywin.focus();
 }else{
 alert(&apos;Please select atleast one record.&apos;);
 }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>echosign_dev1__Send_to_EchoSign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send for Signature</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/echosign_dev1__AgreementTemplateProcess?masterId={!Lead.Id}</url>
     </webLinks>
 </CustomObject>

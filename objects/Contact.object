@@ -234,6 +234,16 @@
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <webLinks>
+        <fullName>Address_Autocomplete</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Address Autocomplete</masterLabel>
+        <openType>replace</openType>
+        <page>AddressAutocompleteContact</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
         <fullName>SDOC__Email_Docs</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
@@ -276,5 +286,17 @@ mywin.focus();
 }else{
 alert(&apos;Please select atleast one record.&apos;);
 }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>echosign_dev1__Send_to_EchoSign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send for Signature</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/echosign_dev1__AgreementTemplateProcess?masterId={!Contact.Id}</url>
     </webLinks>
 </CustomObject>

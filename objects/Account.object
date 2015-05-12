@@ -803,66 +803,16 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
-    <validationRules>
-        <fullName>Validation_Rule_1</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_10</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_2</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_3</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_4</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_5</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_6</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_7</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_8</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>Validation_Rule_9</fullName>
-        <active>true</active>
-        <errorConditionFormula>TRUE</errorConditionFormula>
-        <errorMessage>Test validation</errorMessage>
-    </validationRules>
+    <webLinks>
+        <fullName>Address_Autocomplete</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Address Autocomplete</masterLabel>
+        <openType>replace</openType>
+        <page>AddressAutocompleteAccount</page>
+        <protected>false</protected>
+    </webLinks>
     <webLinks>
         <fullName>Billing</fullName>
         <availability>online</availability>
@@ -925,5 +875,17 @@ mywin.focus();
 }else{
 alert(&apos;Please select atleast one record.&apos;);
 }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>echosign_dev1__Send_to_EchoSign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send for Signature</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/echosign_dev1__AgreementTemplateProcess?masterId={!Account.Id}</url>
     </webLinks>
 </CustomObject>

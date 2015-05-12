@@ -197,4 +197,16 @@
         <protected>false</protected>
         <url>/apex/SDOC__SDCreate1?id={!Contract.Id}&amp;Object=Contract</url>
     </webLinks>
+    <webLinks>
+        <fullName>echosign_dev1__Send_to_EchoSign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send for Signature</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/echosign_dev1__AgreementTemplateProcess?masterId={!Contract.Id}</url>
+    </webLinks>
 </CustomObject>
