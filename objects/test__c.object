@@ -51,6 +51,16 @@
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
     <fields>
+        <fullName>Hello__c</fullName>
+        <externalId>false</externalId>
+        <label>Hello</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>New_Field_2__c</fullName>
         <externalId>false</externalId>
         <label>New Field 2</label>
