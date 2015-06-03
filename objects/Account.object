@@ -177,6 +177,17 @@
         <type>EncryptedText</type>
     </fields>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>Field_10__c</fullName>
         <externalId>false</externalId>
         <label>Field 10</label>
@@ -745,6 +756,7 @@
         <fullName>AllAccounts</fullName>
         <columns>ACCOUNT.CREATED_DATE</columns>
         <columns>ACCOUNT.NAME</columns>
+        <columns>External_Id__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Accounts</label>
         <language>en_US</language>
