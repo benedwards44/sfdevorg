@@ -403,6 +403,106 @@
         <trackFeedHistory>true</trackFeedHistory>
         <type>Picklist</type>
     </fields>
+    <fields>
+        <fullName>avfree__Address_Do_Not_Verify__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Check this box so that the address is never verified by the SmartyStreets service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box so that the address is never verified by the SmartyStreets service</inlineHelpText>
+        <label>Address Do Not Verify</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>avfree__Address_Last_Verified__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Address Last Verified</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>avfree__Address_Latitude__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Latitude for the Geo-Coded, Verified Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Latitude for the Geo-Coded, Verified Address</inlineHelpText>
+        <label>Address Latitude</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>avfree__Address_Longitude__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Longitude for the Geo-Coded, Verified Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Longitude for the Geo-Coded, Verified Address</inlineHelpText>
+        <label>Address Longitude</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>avfree__Address_Return_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Address Return Code</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>avfree__Address_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Shows return code plus icon</description>
+        <externalId>false</externalId>
+        <formula>If ( avfree__Address_Return_Code__c = &quot;Confirmed&quot;,  IMAGE(&quot;/img/msg_icons/confirm16.png&quot;, &quot;Confirmed&quot; ,16,16) &amp; &quot; Confirmed&quot;, 
+If ( avfree__Address_Return_Code__c = &quot;Confirmed - By Dropping Secondary Info&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - By Dropping Secondary Info&quot; ,16,16) &amp; &quot; Confirmed - By Dropping Secondary Info&quot;, 
+If ( avfree__Address_Return_Code__c = &quot;Confirmed - Missing Secondary Info&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - Missing Secondary Info&quot; ,16,16) &amp; &quot; Confirmed - Missing Secondary Info&quot;, 
+If ( avfree__Address_Return_Code__c= &quot;Bad or Blank Address&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Bad or Blank Address&quot; ,16,16) &amp; &quot; Bad or Blank Address&quot;, 
+If ( avfree__Address_Return_Code__c = &quot;Not Submitted&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Submitted&quot; ,16,16) &amp; &quot; Not Submitted&quot;, 
+If ( avfree__Address_Return_Code__c = &quot;Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Confirmed&quot; ,16,16) &amp; &quot; Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/info16.png&quot;, &quot;Note Yet Verified&quot; ,16,16) &amp; &quot; Not Yet Verified&quot; ) ) ) ) ) )</formula>
+        <inlineHelpText>Confirmed
+Not Confirmed
+Confirmed - By Dropping Secondary Info
+Confirmed - Missing Secondary Info
+Not Submitted</inlineHelpText>
+        <label>Address Status</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>avfree__Address_Unit_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Address Unit Number</label>
+        <length>32</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>avfree__Address_Verified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Address Verified</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
     <listViews>
         <fullName>AllOpenLeads</fullName>
         <filterScope>Everything</filterScope>
@@ -564,6 +664,104 @@ mywin = window.open(&apos;/apex/activities__createTasks?Ids=&apos;+records+&apos
 mywin.focus();
 }else{
 alert(&apos;Please select atleast one record.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>avfree__Verify_Address</fullName>
+        <availability>online</availability>
+        <description>SmartyStreets Address Verify &amp; Cleanse</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Verify Address</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/apex.js&quot;)} 
+
+var LeadId = &quot;{! Lead.Id }&quot;; 
+var LeadButtons = new Array(); 
+var buttons = document.getElementsByTagName(&quot;input&quot;); 
+
+for(var i = 0; i &lt; buttons.length; i++) 
+{ 
+    if(buttons[i].type == &quot;submit&quot; || buttons[i].type == &quot;button&quot;) 
+    { 
+        if(buttons[i].value == &quot;Verify Address&quot;) 
+        { 
+            LeadButtons.push(buttons[i]); 
+        } 
+    } 
+} 
+
+var disableButtons = function() 
+{ 
+    for(var i = 0; i &lt; LeadButtons.length; i++) 
+    { 
+        LeadButtons[i].value = &quot;Verifying...&quot;; 
+        LeadButtons[i].className = &quot;btnDisabled&quot;; 
+    } 
+} 
+
+var enableButtons = function() 
+{ 
+    for(var i = 0; i &lt; LeadButtons.length; i++) 
+    { 
+        LeadButtons[i].value = &quot;Verify Address&quot;; 
+        LeadButtons[i].className = &quot;btn&quot;; 
+    } 
+} 
+
+disableButtons(); 
+
+if({!ISNULL(Lead.Street)}) 
+{ 
+    alert(&quot;Please Enter a Lead address before verifying.&quot;); 
+    enableButtons(); 
+} 
+else if({!ISNULL(Lead.PostalCode)} &amp;&amp; ({!ISNULL(Lead.City)} || {!ISNULL(Lead.State)})) 
+{ 
+    alert(&quot;Either the City and State OR the Zip Code is required before verifying.&quot;); 
+    enableButtons(); 
+} 
+else 
+{ 
+    try 
+    { 
+		sforce.apex.execute(&quot;avfree.AddressUpdateService&quot;, &quot;UpdateAddress&quot;, {sTable : &apos;Lead&apos;, sRecordID : LeadId}); 
+        window.location = window.location; 
+    } 
+    catch(error) 
+    { 
+                var theAlert = error.toString();
+                var errorStart = theAlert.indexOf(&apos;[Begin]&apos;);
+                var errorEnd = theAlert.indexOf(&apos;[End]&apos;);
+                if (errorStart&gt;0 &amp;&amp; errorEnd &gt; 0) 
+                {
+                   errorStart = errorStart+7;
+                   alert(theAlert.substring(errorStart,errorEnd));
+                }
+                else
+                {
+                    var errorStartFieldValidation = theAlert.indexOf(&apos;FIELD_CUSTOM_VALIDATION_EXCEPTION, &apos;);
+                    var errorStartFieldAPI = theAlert.indexOf(&apos;REQUIRED_FIELD_MISSING, &apos;);
+                    var errorEnd = theAlert.indexOf(&apos;Class.smartystreets&apos;);
+                    if (errorStartFieldValidation &gt; 0 &amp;&amp; errorEnd &gt; 0) 
+                    {
+                        errorStartFieldValidation = errorStartFieldValidation+35;
+                        alert(&apos;An error has been returned: \n\n&apos; + theAlert.substring(errorStartFieldValidation,errorEnd) + &apos;This error must be resolved before the address can be verified.&apos;);
+                    }
+                    else if (errorStartFieldAPI &gt; 0 &amp;&amp; errorEnd &gt; 0) 
+                    {
+                        errorStartFieldAPI = errorStartFieldAPI+24;
+                        alert(&apos;An error has been returned: \n\n&apos; + theAlert.substring(errorStartFieldAPI,errorEnd) + &apos;This error must be resolved before the address can be verified.&apos;);
+                    }
+                    else
+                    {
+                        alert(&apos;An unknown error was thrown.  If the raw error message below does not make sense, please contact To A Finish Support.\n**************************************\n\n&apos; + theAlert);
+                    }
+                }
+               enableButtons(); 
+    } 
 }</url>
     </webLinks>
     <webLinks>
