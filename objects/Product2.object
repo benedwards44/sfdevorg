@@ -51,7 +51,6 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
-        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <listViews>
