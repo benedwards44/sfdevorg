@@ -112,6 +112,7 @@
         <searchResultsAdditionalFields>CORE.USERS.EMAIL</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USER_ROLE.NAME</searchResultsAdditionalFields>
     </searchLayouts>
+    <sharingModel>Read</sharingModel>
     <webLinks>
         <fullName>Edit_Skills</fullName>
         <availability>online</availability>
