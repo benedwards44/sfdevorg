@@ -51,29 +51,17 @@
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
     <fields>
-        <fullName>Another_Field__c</fullName>
+        <fullName>Date__c</fullName>
         <externalId>false</externalId>
-        <label>Another Field</label>
-        <length>255</length>
+        <label>Date</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>Haha__c</fullName>
         <externalId>false</externalId>
         <label>Haha</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Make_a_Field__c</fullName>
-        <externalId>false</externalId>
-        <label>Make a Field</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
