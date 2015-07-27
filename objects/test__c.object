@@ -69,16 +69,6 @@
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>Haha__c</fullName>
-        <externalId>false</externalId>
-        <label>Haha</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Rich_Text__c</fullName>
         <externalId>false</externalId>
         <label>Rich Text</label>
@@ -92,6 +82,16 @@
         <defaultValue>&quot;HELLO&quot;</defaultValue>
         <externalId>false</externalId>
         <label>String</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Test__c</fullName>
+        <externalId>false</externalId>
+        <label>Test</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
