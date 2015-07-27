@@ -191,6 +191,7 @@
     </fields>
     <fields>
         <fullName>Field_1__c</fullName>
+        <description>Description bla bla</description>
         <externalId>false</externalId>
         <label>Field 1</label>
         <length>255</length>
