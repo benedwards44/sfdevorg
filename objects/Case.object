@@ -452,24 +452,4 @@
         <showsStatus>true</showsStatus>
         <url>https://na1.salesforce.com/opp/oppedit.jsp?accid={!Account_ID}&amp;opp3=Up-sell+/+Cross-sell&amp;opp5=Existing+Customer&amp;opp6=Customer+Support</url>
     </webLinks>
-    <webLinks>
-        <fullName>activities__Create_Tasks_Cases</fullName>
-        <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Create Tasks</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)}
-var records = {!GETRECORDIDS( $ObjectType.Case)};
-var returnURL = window.location.href;
-if(records != null &amp;&amp; records != &apos;&apos;){
-mywin = window.open(&apos;/apex/activities__createTasks?Ids=&apos;+records+&apos;&amp;retURL=&apos;+returnURL+&apos;&amp;type=whatId&apos; , &apos;_top&apos;,
-&apos;height=400,width=600,status=yes,toolbar=no,menubar=no,location=no,center=yes,resizable=no&apos;);
-mywin.focus();
-}else{
-alert(&apos;Please select atleast one record.&apos;);
-}</url>
-    </webLinks>
 </CustomObject>

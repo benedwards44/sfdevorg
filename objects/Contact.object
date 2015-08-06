@@ -101,30 +101,6 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>INFA_AV__Mailing_Address_Validation_Status__c</fullName>
-        <defaultValue>&quot;Not Verified&quot;</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Mailing Address Validation Status</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>INFA_AV__Other_Address_Validation_Status__c</fullName>
-        <defaultValue>&quot;Not Verified&quot;</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Other Address Validation Status</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Languages__c</fullName>
         <externalId>false</externalId>
         <label>Languages</label>
@@ -193,206 +169,6 @@
         <fullName>ReportsToId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Mailing_Address_Status__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Shows return code plus icon</description>
-        <externalId>false</externalId>
-        <formula>If ( avfree__Mailing_Return_Code__c = &quot;Confirmed&quot;,  IMAGE(&quot;/img/msg_icons/confirm16.png&quot;, &quot;Confirmed&quot; ,16,16) &amp; &quot; Confirmed&quot;, 
-If ( avfree__Mailing_Return_Code__c = &quot;Confirmed - By Dropping Secondary Info&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - By Dropping Secondary Info&quot; ,16,16) &amp; &quot; Confirmed - By Dropping Secondary Info&quot;, 
-If ( avfree__Mailing_Return_Code__c = &quot;Confirmed - Missing Secondary Info&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - Missing Secondary Info&quot; ,16,16) &amp; &quot; Confirmed - Missing Secondary Info&quot;, 
-If ( avfree__Mailing_Return_Code__c  = &quot;Bad or Blank Address&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Bad or Blank Address&quot; ,16,16) &amp; &quot; Bad or Blank Address&quot;, 
-If ( avfree__Mailing_Return_Code__c = &quot;Not Submitted&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Submitted&quot; ,16,16) &amp; &quot; Not Submitted&quot;, 
-If ( avfree__Mailing_Return_Code__c = &quot;Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Confirmed&quot; ,16,16) &amp; &quot; Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/info16.png&quot;, &quot;Note Yet Verified&quot; ,16,16) &amp; &quot; Not Yet Verified&quot; ) ) ) ) ) )</formula>
-        <inlineHelpText>Confirmed
-Not Confirmed
-Confirmed - By Dropping Secondary Info
-Confirmed - Missing Secondary Info
-Not Submitted</inlineHelpText>
-        <label>Mailing Address Status</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Mailing_Do_Not_Verify__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Check this box so that the mailing address is never verified by the SmartyStreets service</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Check this box so that the mailing address is never verified by the SmartyStreets service</inlineHelpText>
-        <label>Mailing Do Not Verify</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Mailing_Last_Verified__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Mailing Last Verified</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>DateTime</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Mailing_Latitude__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Latitude for the Geo-Coded, Verified Mailing Address</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Latitude for the Geo-Coded, Verified Mailing Address</inlineHelpText>
-        <label>Mailing Latitude</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>5</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Mailing_Longitude__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Longitude for the Geo-Coded, Verified Mailing Address</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Longitude for the Geo-Coded, Verified Mailing Address</inlineHelpText>
-        <label>Mailing Longitude</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>5</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Mailing_Return_Code__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Mailing Return Code</label>
-        <length>40</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Mailing_Unit_Number__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Mailing Unit Number</label>
-        <length>64</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Mailing_Verified__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Mailing Verified</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Other_Address_Status__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Shows return code plus icon</description>
-        <externalId>false</externalId>
-        <formula>If ( avfree__Other_Return_Code__c = &quot;Confirmed&quot;,  IMAGE(&quot;/img/msg_icons/confirm16.png&quot;, &quot;Confirmed&quot; ,16,16) &amp; &quot; Confirmed&quot;, 
-If ( avfree__Other_Return_Code__c = &quot;Confirmed - By Dropping Secondary Info&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - By Dropping Secondary Info&quot; ,16,16) &amp; &quot; Confirmed - By Dropping Secondary Info&quot;, 
-If ( avfree__Other_Return_Code__c = &quot;Confirmed - Missing Secondary Info&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - Missing Secondary Info&quot; ,16,16) &amp; &quot; Confirmed - Missing Secondary Info&quot;, 
-If ( avfree__Other_Return_Code__c  = &quot;Bad or Blank Address&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Bad or Blank Address&quot; ,16,16) &amp; &quot; Bad or Blank Address&quot;, 
-If ( avfree__Other_Return_Code__c = &quot;Not Submitted&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Submitted&quot; ,16,16) &amp; &quot; Not Submitted&quot;, 
-If ( avfree__Other_Return_Code__c = &quot;Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Confirmed&quot; ,16,16) &amp; &quot; Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/info16.png&quot;, &quot;Note Yet Verified&quot; ,16,16) &amp; &quot; Not Yet Verified&quot; ) ) ) ) ) )</formula>
-        <inlineHelpText>Confirmed
-Not Confirmed
-Confirmed - By Dropping Secondary Info
-Confirmed - Missing Secondary Info
-Not Submitted</inlineHelpText>
-        <label>Other Address Status</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Other_Do_Not_Verify__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Check this box so that the other address is never verified by the SmartyStreets service</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Check this box so that the other address is never verified by the SmartyStreets service</inlineHelpText>
-        <label>Other Do Not Verify</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Other_Last_Verified__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Other Last Verified</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>DateTime</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Other_Latitude__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Latitude for the Geo-Coded, Verified Other Address</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Latitude for the Geo-Coded, Verified Other Address</inlineHelpText>
-        <label>Other Latitude</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>5</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Other_Longitude__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Longitude for the Geo-Coded, Verified Other Address</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Longitude for the Geo-Coded, Verified Other Address</inlineHelpText>
-        <label>Other Longitude</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>5</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Other_Return_Code__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Other Return Code</label>
-        <length>40</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Other_Unit_Number__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Other Unit Number</label>
-        <length>64</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Other_Verified__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Other Verified</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
     </fields>
     <listViews>
         <fullName>AllContacts</fullName>
@@ -468,70 +244,6 @@ Not Submitted</inlineHelpText>
         <protected>false</protected>
     </webLinks>
     <webLinks>
-        <fullName>INFA_AV__Verify_Mailing_Address</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Verify Mailing Address</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>if((&apos;{!JSENCODE(Contact.MailingCountry) }&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.MailingCountry)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Contact.MailingStreet)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.MailingStreet)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Contact.MailingCity)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.MailingCity)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Contact.MailingState)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.MailingState)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Contact.MailingPostalCode)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.MailingPostalCode)}&apos;==null)) 
-{ 
-var url=&quot;/apex/INFA_AV__selectaddress?id=&quot;+&quot;{!Contact.Id}&quot;+&quot;&amp;type=&quot;+&quot;contact&quot;+&quot;&amp;mode=1&quot;; 
-var val = window.open(url,&apos;&apos;,&apos;width=850,height=490,left=250,top=100&apos;); 
-//window.top.location.reload(true); 
-} 
-else if(&apos;{!Contact.INFA_AV__Mailing_Address_Validation_Status__c}&apos; != &apos;Address Verified&apos;) 
-{ 
-if((&apos;{!JSENCODE(Contact.MailingCountry)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.MailingCountry)}&apos;==null) &amp;&amp;((&apos;{!JSENCODE(Contact.MailingStreet)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Contact.MailingStreet)}&apos;!=null) ||(&apos;{!JSENCODE(Contact.MailingCity)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Contact.MailingCity)}&apos;!=null) ||(&apos;{!JSENCODE(Contact.MailingState)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Contact.MailingState)}&apos;!=null) ||(&apos;{!JSENCODE(Contact.MailingPostalCode)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Contact.MailingPostalCode)}&apos;!=null))) 
-{ 
-alert(&apos;Mailing Country is mandatory&apos;); 
-} 
-else 
-{ 
-var url=&quot;/apex/INFA_AV__verifyAddress?id=&quot;+&quot;{!Contact.Id}&quot;+&quot;&amp;type=&quot;+&quot;contact&quot;+&quot;&amp;mode=1&quot;; 
-var val = window.open(url,&apos;&apos;,&apos;width=850,height=490,left=250,top=100,scrollbars=yes&apos;); 
-//window.top.location.reload(true); 
-} 
-} 
-else if(&apos;{!Contact.INFA_AV__Mailing_Address_Validation_Status__c}&apos; == &apos;Address Verified&apos;) 
-{ 
-alert(&apos;Mailing address is already verified&apos;); 
-}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>INFA_AV__Verify_Other_Address</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Verify Other Address</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>if((&apos;{!JSENCODE(Contact.OtherCountry)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.OtherCountry)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Contact.OtherStreet)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.OtherStreet)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Contact.OtherCity)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.OtherCity)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Contact.OtherState)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.OtherState)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Contact.OtherPostalCode)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.OtherPostalCode)}&apos;==null)) 
-{ 
-var url=&quot;/apex/INFA_AV__selectaddress?id=&quot;+&quot;{!Contact.Id}&quot;+&quot;&amp;type=&quot;+&quot;contact&quot;+&quot;&amp;mode=2&quot;; 
-var val = window.open(url,&apos;&apos;,&apos;width=850,height=490,left=250,top=100&apos;); 
-//window.top.location.reload(true); 
-} 
-else if(&apos;{!Contact.INFA_AV__Other_Address_Validation_Status__c}&apos;!=&apos;Address Verified&apos;) 
-{ 
-if((&apos;{!JSENCODE(Contact.OtherCountry)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Contact.OtherCountry)}&apos;==null) &amp;&amp;((&apos;{!JSENCODE(Contact.OtherStreet)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Contact.OtherStreet)}&apos;!=null) ||(&apos;{!JSENCODE(Contact.OtherCity)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Contact.OtherCity)}&apos;!=null) ||(&apos;{!JSENCODE(Contact.OtherState)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Contact.OtherState)}&apos;!=null) ||(&apos;{!JSENCODE(Contact.OtherPostalCode)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Contact.OtherPostalCode)}&apos;!=null))) 
-{ 
-alert(&apos;Other Country is mandatory&apos;); 
-} 
-else 
-{ 
-var url=&quot;/apex/INFA_AV__verifyAddress?id=&quot;+&quot;{!Contact.Id}&quot;+&quot;&amp;type=&quot;+&quot;contact&quot;+&quot;&amp;mode=2&quot;; 
-var val = window.open(url,&apos;&apos;,&apos;width=850,height=490,left=250,top=100,scrollbars=yes&apos;); 
-//window.top.location.reload(true); 
-} 
-} 
-else if(&apos;{!Contact.INFA_AV__Other_Address_Validation_Status__c}&apos;==&apos;Address Verified&apos;) 
-{ 
-alert(&apos;Other address is already verified&apos;); 
-}</url>
-    </webLinks>
-    <webLinks>
         <fullName>SDOC__Email_Docs</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
@@ -556,122 +268,6 @@ alert(&apos;Other address is already verified&apos;);
         <url>/apex/SDOC__SDCreate1?id={!Contact.Id}&amp;Object=Contact</url>
     </webLinks>
     <webLinks>
-        <fullName>activities__Create_Tasks_Contacts</fullName>
-        <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Create Tasks</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)}
-var records = {!GETRECORDIDS( $ObjectType.Contact)};
-var returnURL = window.location.href;
-if(records != null &amp;&amp; records != &apos;&apos;){
-mywin = window.open(&apos;/apex/activities__createTasks?Ids=&apos;+records+&apos;&amp;retURL=&apos;+returnURL+&apos;&amp;type=whoid&apos;+&apos;&amp;SelectedObject=Contact&apos; , &apos;_top&apos;,
-&apos;height=400,width=600,status=yes,toolbar=no,menubar=no,location=no,center=yes,resizable=no&apos;);
-mywin.focus();
-}else{
-alert(&apos;Please select atleast one record.&apos;);
-}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>avfree__Verify_Addresses</fullName>
-        <availability>online</availability>
-        <description>Uses SmartyStreets to verify and cleanse addresses.</description>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Verify Addresses</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)}
-{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/apex.js&quot;)}
-
-var ContactId = &quot;{! Contact.Id }&quot;;
-var ContactButtons = new Array();
-var buttons = document.getElementsByTagName(&quot;input&quot;);
-
-for(var i = 0; i &lt; buttons.length; i++)
-{
-if(buttons[i].type == &quot;submit&quot; || buttons[i].type == &quot;button&quot;)
-{
-if(buttons[i].value == &quot;Verify Addresses&quot;)
-{
-ContactButtons.push(buttons[i]);
-}
-}
-}
-var disableButtons = function()
-{
-for(var i = 0; i &lt; ContactButtons.length; i++)
-{
-ContactButtons[i].value = &quot;Verifying...&quot;;
-ContactButtons[i].className = &quot;btnDisabled&quot;;
-}
-}
-var enableButtons = function()
-{
-for(var i = 0; i &lt; ContactButtons.length; i++)
-{
-ContactButtons[i].value = &quot;Verify Addresses&quot;;
-ContactButtons[i].className = &quot;btn&quot;;
-}
-}
-
-disableButtons();
-
-if({!ISNULL(Contact.MailingStreet) &amp;&amp; ISNULL(Contact.OtherStreet)})
-{
-alert(&quot;Please Enter an Address on the contact before verifying.&quot;);
-enableButtons();
-}
-else if({!((ISNULL(Contact.MailingPostalCode) &amp;&amp; (ISNULL(Contact.MailingCity) || ISNULL(Contact.MailingState))) &amp;&amp; (ISNULL(Contact.OtherPostalCode) &amp;&amp; (ISNULL(Contact.OtherCity) || ISNULL(Contact.OtherState))))})
-{
-alert(&quot;Either the City and State OR the Zip Code is required before verifying.&quot;);
-enableButtons();
-}
-else
-{
-try
-{
-sforce.apex.execute(&quot;avfree.AddressUpdateService&quot;, &quot;UpdateAddress&quot;, {sTable : &apos;Contact&apos;, sRecordID : ContactId});
-window.location = window.location;
-}
-    catch(error) 
-    { 
-                var theAlert = error.toString();
-                var errorStart = theAlert.indexOf(&apos;[Begin]&apos;);
-                var errorEnd = theAlert.indexOf(&apos;[End]&apos;);
-                if (errorStart&gt;0 &amp;&amp; errorEnd &gt; 0) 
-                {
-                   errorStart = errorStart+7;
-                   alert(theAlert.substring(errorStart,errorEnd));
-                }
-                else
-                {
-                    var errorStartFieldValidation = theAlert.indexOf(&apos;FIELD_CUSTOM_VALIDATION_EXCEPTION, &apos;);
-                    var errorStartFieldAPI = theAlert.indexOf(&apos;REQUIRED_FIELD_MISSING, &apos;);
-                    var errorEnd = theAlert.indexOf(&apos;Class.smartystreets&apos;);
-                    if (errorStartFieldValidation &gt; 0 &amp;&amp; errorEnd &gt; 0) 
-                    {
-                        errorStartFieldValidation = errorStartFieldValidation+35;
-                        alert(&apos;An error has been returned: \n\n&apos; + theAlert.substring(errorStartFieldValidation,errorEnd) + &apos;This error must be resolved before the address can be verified.&apos;);
-                    }
-                    else if (errorStartFieldAPI &gt; 0 &amp;&amp; errorEnd &gt; 0) 
-                    {
-                        errorStartFieldAPI = errorStartFieldAPI+24;
-                        alert(&apos;An error has been returned: \n\n&apos; + theAlert.substring(errorStartFieldAPI,errorEnd) + &apos;This error must be resolved before the address can be verified.&apos;);
-                    }
-                    else
-                    {
-                        alert(&apos;An unknown error was thrown.  If the raw error message below does not make sense, please contact To A Finish Support.\n**************************************\n\n&apos; + theAlert);
-                    }
-                }
-               enableButtons(); 
-    } 
-}</url>
-    </webLinks>
-    <webLinks>
         <fullName>echosign_dev1__Send_to_EchoSign</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
@@ -682,5 +278,27 @@ window.location = window.location;
         <openType>sidebar</openType>
         <protected>false</protected>
         <url>/apex/echosign_dev1__AgreementTemplateProcess?masterId={!Contact.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>pca__Address_Finder</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Address Finder</masterLabel>
+        <openType>sidebar</openType>
+        <page>pca__ContactAddressFinder</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>pca__Address_Finder_Link</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Address Finder</masterLabel>
+        <openType>sidebar</openType>
+        <page>pca__ContactAddressFinder</page>
+        <protected>false</protected>
     </webLinks>
 </CustomObject>

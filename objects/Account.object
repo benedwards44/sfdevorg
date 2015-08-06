@@ -351,30 +351,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>INFA_AV__Billing_Address_Validation_Status__c</fullName>
-        <defaultValue>&quot;Not Verified&quot;</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Billing Address Validation Status</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>INFA_AV__Shipping_Address_Validation_Status__c</fullName>
-        <defaultValue>&quot;Not Verified&quot;</defaultValue>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Shipping Address Validation Status</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Industry</fullName>
         <picklist>
             <picklistValues>
@@ -769,239 +745,6 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <fields>
-        <fullName>avfree__Billing_Address_Status__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Shows Return Code plus icon</description>
-        <externalId>false</externalId>
-        <formula>If ( avfree__Billing_Return_Code__c = &quot;Confirmed&quot;,  IMAGE(&quot;/img/msg_icons/confirm16.png&quot;, &quot;Confirmed&quot; ,16,16) &amp; &quot; Confirmed&quot;, 
-If ( avfree__Billing_Return_Code__c = &quot;Confirmed - By Dropping Secondary Info&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - By Dropping Secondary Info&quot; ,16,16) &amp; &quot; Confirmed - By Dropping Secondary Info&quot;, 
-If ( avfree__Billing_Return_Code__c = &quot;Confirmed - Missing Secondary Info&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - Missing Secondary Info&quot; ,16,16) &amp; &quot; Confirmed - Missing Secondary Info&quot;, 
-If ( avfree__Billing_Return_Code__c = &quot;Not Submitted&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Submitted&quot; ,16,16) &amp; &quot; Not Submitted&quot;, 
-If ( avfree__Billing_Return_Code__c = &quot;Bad or Blank Address&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Bad or Blank Address&quot; ,16,16) &amp; &quot; Bad or Blank Address&quot;, 
-If ( avfree__Billing_Return_Code__c = &quot;Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Confirmed&quot; ,16,16) &amp; &quot; Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/info16.png&quot;, &quot;Not Yet Verified&quot; ,16,16) &amp; &quot; Not Yet Verified&quot; ) ) ) ) ) )</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>Confirmed
-Not Confirmed
-Confirmed - By Dropping Secondary Info
-Confirmed - Missing Secondary Info
-Not Submitted</inlineHelpText>
-        <label>Billing Address Status</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Billing_Do_Not_Verify__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Check this box so that the billing address is never verified by the SmartyStreets service</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Check this box so that the billing address is never verified by the SmartyStreets service</inlineHelpText>
-        <label>Billing Do Not Verify</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Billing_Last_Verified__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Last date the billing address was verified</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Last date the billing address was verified</inlineHelpText>
-        <label>Billing Last Verified</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>DateTime</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Billing_Latitude__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Latitude for the Geo-Coded, Verified Billing Address</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Latitude for the Geo-Coded, Verified Billing Address</inlineHelpText>
-        <label>Billing Latitude</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>5</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Billing_Longitude__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Longitude for the Geo-Coded, Verified Billing Address</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Longitude for the Geo-Coded, Verified Billing Address</inlineHelpText>
-        <label>Billing Longitude</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>5</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Billing_Return_Code__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Confirmed (The entire address was DPV confirmed as a deliverable address.)
-Not Confirmed (The address could not be DPV confirmed as a deliverable address.)
-Confirmed - By Dropping Secondary Info	The address was DPV confirmed by dropping the secondary information (apartment, suite, etc.))
-Confirmed - Missing Secondary Info (The address was DPV confirmed, but it is missing secondary information (apartment, suite, etc.))
-Not Submitted (The address was not submitted for DPV confirmation. This is usually because the address does not have a ZIP code and +4 add-on code, or the address has already been determined to be Not Deliverable.)</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Confirmed
-Not Confirmed
-Confirmed - By Dropping Secondary Info
-Confirmed - Missing Secondary Info
-Not Submitted</inlineHelpText>
-        <label>Billing Return Code</label>
-        <length>40</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Billing_Unit_Number__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Unit Number for the Verified Billing Address</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Unit Number for the Verified Billing Address</inlineHelpText>
-        <label>Billing Unit Number</label>
-        <length>64</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Billing_Verified__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Has the Current Billing Address been verified by SmartyStreets?</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Has the Current Billing Address been verified by SmartyStreets?</inlineHelpText>
-        <label>Billing Verified</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Shipping_Address_Status__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Shows Return Code plus icon</description>
-        <externalId>false</externalId>
-        <formula>If ( avfree__Shipping_Return_Code__c = &quot;Confirmed&quot;,  IMAGE(&quot;/img/msg_icons/confirm16.png&quot;, &quot;Confirmed&quot; ,16,16) &amp; &quot; Confirmed&quot;, 
-If ( avfree__Shipping_Return_Code__c = &quot;Confirmed - By Dropping Secondary Info&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - By Dropping Secondary Info&quot; ,16,16) &amp; &quot; Confirmed - By Dropping Secondary Info&quot;, 
-If ( avfree__Shipping_Return_Code__c = &quot;Confirmed - Missing Secondary Info&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - Missing Secondary Info&quot; ,16,16) &amp; &quot; Confirmed - Missing Secondary Info&quot;, 
-If ( avfree__Shipping_Return_Code__c = &quot;Bad or Blank Address&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Bad or Blank Address&quot; ,16,16) &amp; &quot; Bad or Blank Address&quot;, If ( avfree__Shipping_Return_Code__c = &quot;Not Submitted&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Submitted&quot; ,16,16) &amp; &quot; Not Submitted&quot;, 
-If ( avfree__Shipping_Return_Code__c = &quot;Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Confirmed&quot; ,16,16) &amp; &quot; Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/info16.png&quot;, &quot;Not Yet Verified&quot; ,16,16) &amp; &quot; Not Yet Verified&quot; ) ) ) ) ) )</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>Confirmed
-Not Confirmed
-Confirmed - By Dropping Secondary Info
-Confirmed - Missing Secondary Info
-Not Submitted</inlineHelpText>
-        <label>Shipping Address Status</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Shipping_Do_Not_Verify__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Check this box so that the shipping address is never verified by the SmartyStreets service</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Check this box so that the shipping address is never verified by the SmartyStreets service</inlineHelpText>
-        <label>Shipping Do Not Verify</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Shipping_Last_Verified__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Last date the shipping address was verified</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Last date the shipping address was verified</inlineHelpText>
-        <label>Shipping Last Verified</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>DateTime</type>
-    </fields>
-    <fields>
-        <fullName>avfree__Shipping_Latitude__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Latitude for the Geo-Coded, Verified Shipping Address</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Latitude for the Geo-Coded, Verified Shipping Address</inlineHelpText>
-        <label>Shipping Latitude</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>5</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Shipping_Longitude__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Longitude for the Geo-Coded, Verified Shipping Address</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Longitude for the Geo-Coded, Verified Shipping Address</inlineHelpText>
-        <label>Shipping Longitude</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>5</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Shipping_Return_Code__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Confirmed (The entire address was DPV confirmed as a deliverable address.)
-Not Confirmed (The address could not be DPV confirmed as a deliverable address.)
-Confirmed - By Dropping Secondary Info The address was DPV confirmed by dropping the secondary information (apartment, suite, etc.))
-Confirmed - Missing Secondary Info (The address was DPV confirmed, but it is missing secondary information (apartment, suite, etc.))
-Not Submitted (The address was not submitted for DPV confirmation. This is usually because the address does not have a ZIP code and +4 add-on code, or the address has already been determined to be Not Deliverable.)</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Confirmed
-Not Confirmed
-Confirmed - By Dropping Secondary Info
-Confirmed - Missing Secondary Info
-Not Submitted</inlineHelpText>
-        <label>Shipping Return Code</label>
-        <length>40</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Shipping_Unit_Number__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Unit Number for the Verified Shipping Address</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Unit Number for the Verified Shipping Address</inlineHelpText>
-        <label>Shipping Unit Number</label>
-        <length>64</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>avfree__Shipping_Verified__c</fullName>
-        <defaultValue>false</defaultValue>
-        <deprecated>false</deprecated>
-        <description>Has the Current Shipping Address been verified by SmartyStreets?</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Has the Current Shipping Address been verified by SmartyStreets?</inlineHelpText>
-        <label>Shipping Verified</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
     <listViews>
         <fullName>AllAccounts</fullName>
         <columns>ACCOUNT.CREATED_DATE</columns>
@@ -1095,70 +838,6 @@ Not Submitted</inlineHelpText>
         <url>http://www.genwatt.com/genwatt/billing.htm?actname={!Account_Name}</url>
     </webLinks>
     <webLinks>
-        <fullName>INFA_AV__Verify_Billing_Address</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Verify Billing Address</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>if((&apos;{!JSENCODE(Account.BillingCountry)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.BillingCountry)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Account.BillingStreet)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.BillingStreet)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Account.BillingCity)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.BillingCity)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Account.BillingState)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.BillingState)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Account.BillingPostalCode)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.BillingPostalCode)}&apos;==null)) 
-{ 
-var url=&quot;/apex/INFA_AV__selectaddress?id=&quot;+&quot;{!Account.Id}&quot;+&quot;&amp;type=&quot;+&quot;account&quot;+&quot;&amp;mode=1&quot;; 
-var val = window.open(url,&apos;&apos;,&apos;width=850,height=490,left=250,top=100&apos;); 
-//window.top.location.reload(true); 
-} 
-else if(&apos;{!Account.INFA_AV__Billing_Address_Validation_Status__c}&apos;!=&apos;Address Verified&apos;) 
-{ 
-if((&apos;{!JSENCODE(Account.BillingCountry)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.BillingCountry)}&apos;==null) &amp;&amp;((&apos;{!JSENCODE(Account.BillingStreet)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Account.BillingStreet)}&apos;!=null) ||(&apos;{!JSENCODE(Account.BillingCity)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Account.BillingCity)}&apos;!=null) ||(&apos;{!JSENCODE(Account.BillingState)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Account.BillingState)}&apos;!=null) ||(&apos;{!JSENCODE(Account.BillingPostalCode)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Account.BillingPostalCode)}&apos;!=null))) 
-{ 
-alert(&apos;Billing Country is mandatory&apos;); 
-} 
-else 
-{ 
-var url=&quot;/apex/INFA_AV__verifyAddress?id=&quot;+&quot;{!Account.Id}&quot;+&quot;&amp;type=&quot;+&quot;account&quot;+&quot;&amp;mode=1&quot;; 
-var val = window.open(url,&apos;&apos;,&apos;width=850,height=490,left=250,top=100,scrollbars=yes&apos;); 
-//window.top.location.reload(true); 
-} 
-} 
-else if(&apos;{!Account.INFA_AV__Billing_Address_Validation_Status__c}&apos;==&apos;Address Verified&apos;) 
-{ 
-alert(&apos;Billing Address is already verified&apos;); 
-}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>INFA_AV__Verify_Shipping_Address</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Verify Shipping Address</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>if((&apos;{! JSENCODE(Account.ShippingCountry)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.ShippingCountry)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Account.ShippingStreet)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.ShippingStreet)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Account.ShippingCity)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.ShippingCity)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Account.ShippingState)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.ShippingState)}&apos;==null) &amp;&amp;(&apos;{!JSENCODE(Account.ShippingPostalCode)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.ShippingPostalCode)}&apos;==null)) 
-{ 
-var url=&quot;/apex/INFA_AV__selectaddress?id=&quot;+&quot;{!Account.Id}&quot;+&quot;&amp;type=&quot;+&quot;account&quot;+&quot;&amp;mode=2&quot;; 
-var val = window.open(url,&apos;&apos;,&apos;width=850,height=490,left=250,top=100&apos;); 
-//window.top.location.reload(true); 
-} 
-else if(&apos;{!Account.INFA_AV__Shipping_Address_Validation_Status__c}&apos;!=&apos;Address Verified&apos;)
-{
-if((&apos;{!JSENCODE(Account.ShippingCountry)}&apos;==&apos;&apos; || &apos;{!JSENCODE(Account.ShippingCountry)}&apos;==null) &amp;&amp;((&apos;{!JSENCODE(Account.ShippingStreet)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Account.ShippingStreet)}&apos;!=null) ||(&apos;{!JSENCODE(Account.ShippingCity)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Account.ShippingCity)}&apos;!=null) ||(&apos;{!JSENCODE(Account.ShippingState)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Account.ShippingState)}&apos;!=null) ||(&apos;{!JSENCODE(Account.ShippingPostalCode)}&apos;!=&apos;&apos; &amp;&amp; &apos;{!JSENCODE(Account.ShippingPostalCode)}&apos;!=null))) 
-{ 
-alert(&apos;Shipping Country is mandatory&apos;); 
-}
-else
-{
-var url=&quot;/apex/INFA_AV__verifyAddress?id=&quot;+&quot;{!Account.Id}&quot;+&quot;&amp;type=&quot;+&quot;account&quot;+&quot;&amp;mode=2&quot;; 
-var val =window.open(url,&apos;&apos;,&apos;width=850,height=490,left=250,top=100,scrollbars=yes&apos;); 
-//window.top.location.reload(true); 
-}
-}
-else if(&apos;{!Account.INFA_AV__Shipping_Address_Validation_Status__c}&apos;==&apos;Address Verified&apos;) 
-{ 
-alert(&apos;Shipping Address is already verified&apos;); 
-}</url>
-    </webLinks>
-    <webLinks>
         <fullName>SDOC__Email_Docs</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
@@ -1183,219 +862,6 @@ alert(&apos;Shipping Address is already verified&apos;);
         <url>/apex/SDOC__SDCreate1?id={!Account.Id}&amp;Object=Account</url>
     </webLinks>
     <webLinks>
-        <fullName>activities__Create_Tasks_Accounts</fullName>
-        <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Create Tasks</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)}
-var records = {!GETRECORDIDS( $ObjectType.Account)};
-var returnURL = window.location.href;
-if(records != null &amp;&amp; records != &apos;&apos;){
-mywin = window.open(&apos;/apex/activities__createTasks?Ids=&apos;+records+&apos;&amp;retURL=&apos;+returnURL+&apos;&amp;type=whatid&apos; , &apos;_top&apos;,
-&apos;height=400,width=600,status=yes,toolbar=no,menubar=no,location=no,center=yes,resizable=no&apos;);
-mywin.focus();
-}else{
-alert(&apos;Please select atleast one record.&apos;);
-}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>avfree__Verify_Addresses</fullName>
-        <availability>online</availability>
-        <description>Verifies Billing and Shipping Addresses</description>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Verify Addresses</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)}
-{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/apex.js&quot;)}
-
-var AccountId = &quot;{! Account.Id }&quot;;
-var AccountButtons = new Array();
-var buttons = document.getElementsByTagName(&quot;input&quot;);
-
-for(var i = 0; i &lt; buttons.length; i++)
-{
-	if(buttons[i].type == &quot;submit&quot; || buttons[i].type == &quot;button&quot;)
-	{
-		if(buttons[i].value == &quot;Verify Addresses&quot;)
-		{
-			AccountButtons.push(buttons[i]);
-		}
-	}
-}
-var disableButtons = function()
-{
-	for(var i = 0; i &lt; AccountButtons.length; i++)
-	{
-		AccountButtons[i].value = &quot;Verifying...&quot;;
-		AccountButtons[i].className = &quot;btnDisabled&quot;;
-	}
-}
-var enableButtons = function()
-{
-	for(var i = 0; i &lt; AccountButtons.length; i++)
-	{
-		AccountButtons[i].value = &quot;Verify Addresses&quot;;
-		AccountButtons[i].className = &quot;btn&quot;;
-	}
-}
-
-disableButtons();
-
-if({!ISNULL(Account.BillingStreet) &amp;&amp; ISNULL(Account.ShippingStreet)}) 
-{
-	alert(&quot;Please Enter an account address before verifying.&quot;);
-	enableButtons();
-}
-else if({!((ISNULL(Account.BillingPostalCode) &amp;&amp; (ISNULL(Account.BillingCity) || ISNULL(Account.BillingState))) &amp;&amp; (ISNULL(Account.ShippingPostalCode) &amp;&amp; (ISNULL(Account.ShippingCity) || ISNULL(Account.ShippingState))))}) 
-{
-	alert(&quot;Either the City and State OR the Zip Code is required before verifying.&quot;);
-	enableButtons();
-}
-else
-{
-	try
-	{
-		///Changed by MK
-		sforce.apex.execute(&quot;avfree.AddressUpdateService&quot;, &quot;UpdateAddress&quot;, {sTable : &apos;Account&apos;, sRecordID : AccountId});
-		window.location = window.location;
-	}
-    catch(error) 
-    { 
-                var theAlert = error.toString();
-                var errorStart = theAlert.indexOf(&apos;[Begin]&apos;);
-                var errorEnd = theAlert.indexOf(&apos;[End]&apos;);
-                if (errorStart&gt;0 &amp;&amp; errorEnd &gt; 0) 
-                {
-                   errorStart = errorStart+7;
-                   alert(theAlert.substring(errorStart,errorEnd));
-                }
-                else
-                {
-                    var errorStartFieldValidation = theAlert.indexOf(&apos;FIELD_CUSTOM_VALIDATION_EXCEPTION, &apos;);
-                    var errorStartFieldAPI = theAlert.indexOf(&apos;REQUIRED_FIELD_MISSING, &apos;);
-                    var errorEnd = theAlert.indexOf(&apos;Class.smartystreets&apos;);
-                    if (errorStartFieldValidation &gt; 0 &amp;&amp; errorEnd &gt; 0) 
-                    {
-                        errorStartFieldValidation = errorStartFieldValidation+35;
-                        alert(&apos;An error has been returned: \n\n&apos; + theAlert.substring(errorStartFieldValidation,errorEnd) + &apos;This error must be resolved before the address can be verified.&apos;);
-                    }
-                    else if (errorStartFieldAPI &gt; 0 &amp;&amp; errorEnd &gt; 0) 
-                    {
-                        errorStartFieldAPI = errorStartFieldAPI+24;
-                        alert(&apos;An error has been returned: \n\n&apos; + theAlert.substring(errorStartFieldAPI,errorEnd) + &apos;This error must be resolved before the address can be verified.&apos;);
-                    }
-                    else
-                    {
-                        alert(&apos;An unknown error was thrown.  If the raw error message below does not make sense, please contact To A Finish Support.\n**************************************\n\n&apos; + theAlert);
-                    }
-                }
-               enableButtons(); 
-    } 
-}</url>
-    </webLinks>
-    <webLinks>
-        <fullName>avfree__Verify_Addresses_PA</fullName>
-        <availability>online</availability>
-        <description>Verifies Billing Address for Person Accounts</description>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Verify Addresses (PA)</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)} 
-{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/apex.js&quot;)} 
-
-var AccountId = &quot;{! Account.Id }&quot;; 
-var AccountButtons = new Array(); 
-var buttons = document.getElementsByTagName(&quot;input&quot;); 
-
-for(var i = 0; i &lt; buttons.length; i++) 
-{ 
-if(buttons[i].type == &quot;submit&quot; || buttons[i].type == &quot;button&quot;) 
-{ 
-if(buttons[i].value == &quot;Verify Addresses&quot;) 
-{ 
-AccountButtons.push(buttons[i]); 
-} 
-} 
-} 
-var disableButtons = function() 
-{ 
-for(var i = 0; i &lt; AccountButtons.length; i++) 
-{ 
-AccountButtons[i].value = &quot;Verifying...&quot;; 
-AccountButtons[i].className = &quot;btnDisabled&quot;; 
-} 
-} 
-var enableButtons = function() 
-{ 
-for(var i = 0; i &lt; AccountButtons.length; i++) 
-{ 
-AccountButtons[i].value = &quot;Verify Addresses&quot;; 
-AccountButtons[i].className = &quot;btn&quot;; 
-} 
-} 
-
-disableButtons(); 
-
-if({!ISNULL(Account.BillingStreet) &amp;&amp; ISNULL(Account.ShippingStreet)}) 
-{ 
-alert(&quot;Please Enter an account address before verifying.&quot;); 
-enableButtons(); 
-} 
-else if({!((ISNULL(Account.BillingPostalCode) &amp;&amp; (ISNULL(Account.BillingCity) || ISNULL(Account.BillingState))) &amp;&amp; (ISNULL(Account.ShippingPostalCode) &amp;&amp; (ISNULL(Account.ShippingCity) || ISNULL(Account.ShippingState))))}) 
-{ 
-alert(&quot;Either the City and State OR the Zip Code is required before verifying.&quot;); 
-enableButtons(); 
-} 
-else 
-{ 
-try 
-{ 
-sforce.apex.execute(&quot;avfree.AddressUpdateService&quot;, &quot;UpdateAddress&quot;, {sTable : &apos;Person Account&apos;, sRecordID : AccountId}); 
-window.location = window.location; 
-} 
-    catch(error) 
-    { 
-                var theAlert = error.toString();
-                var errorStart = theAlert.indexOf(&apos;[Begin]&apos;);
-                var errorEnd = theAlert.indexOf(&apos;[End]&apos;);
-                if (errorStart&gt;0 &amp;&amp; errorEnd &gt; 0) 
-                {
-                   errorStart = errorStart+7;
-                   alert(theAlert.substring(errorStart,errorEnd));
-                }
-                else
-                {
-                    var errorStartFieldValidation = theAlert.indexOf(&apos;FIELD_CUSTOM_VALIDATION_EXCEPTION, &apos;);
-                    var errorStartFieldAPI = theAlert.indexOf(&apos;REQUIRED_FIELD_MISSING, &apos;);
-                    var errorEnd = theAlert.indexOf(&apos;Class.smartystreets&apos;);
-                    if (errorStartFieldValidation &gt; 0 &amp;&amp; errorEnd &gt; 0) 
-                    {
-                        errorStartFieldValidation = errorStartFieldValidation+35;
-                        alert(&apos;An error has been returned: \n\n&apos; + theAlert.substring(errorStartFieldValidation,errorEnd) + &apos;This error must be resolved before the address can be verified.&apos;);
-                    }
-                    else if (errorStartFieldAPI &gt; 0 &amp;&amp; errorEnd &gt; 0) 
-                    {
-                        errorStartFieldAPI = errorStartFieldAPI+24;
-                        alert(&apos;An error has been returned: \n\n&apos; + theAlert.substring(errorStartFieldAPI,errorEnd) + &apos;This error must be resolved before the address can be verified.&apos;);
-                    }
-                    else
-                    {
-                        alert(&apos;An unknown error was thrown.  If the raw error message below does not make sense, please contact To A Finish Support.\n**************************************\n\n&apos; + theAlert);
-                    }
-                }
-               enableButtons(); 
-    } 
-}</url>
-    </webLinks>
-    <webLinks>
         <fullName>echosign_dev1__Send_to_EchoSign</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
@@ -1406,5 +872,49 @@ window.location = window.location;
         <openType>sidebar</openType>
         <protected>false</protected>
         <url>/apex/echosign_dev1__AgreementTemplateProcess?masterId={!Account.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>pca__Address_Finder</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Address Finder</masterLabel>
+        <openType>sidebar</openType>
+        <page>pca__AccountAddressFinder</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>pca__Address_Finder_Link</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Address Finder</masterLabel>
+        <openType>sidebar</openType>
+        <page>pca__AccountAddressFinder</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>pca__Person_Address_Finder</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Address Finder</masterLabel>
+        <openType>sidebar</openType>
+        <page>pca__PersonAccountAddressFinder</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>pca__Person_Address_Finder_Link</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Address Finder</masterLabel>
+        <openType>sidebar</openType>
+        <page>pca__PersonAccountAddressFinder</page>
+        <protected>false</protected>
     </webLinks>
 </CustomObject>
