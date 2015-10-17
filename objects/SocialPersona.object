@@ -32,13 +32,29 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <fields>
+        <fullName>ExternalId</fullName>
+    </fields>
+    <fields>
+        <fullName>ExternalPictureURL</fullName>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+    </fields>
+    <fields>
         <fullName>ParentId</fullName>
         <type>MasterDetail</type>
     </fields>
+    <fields>
+        <fullName>ProfileUrl</fullName>
+    </fields>
+    <fields>
+        <fullName>Provider</fullName>
+    </fields>
+    <fields>
+        <fullName>SourceApp</fullName>
+    </fields>
     <searchLayouts>
-        <customTabListAdditionalFields>Name</customTabListAdditionalFields>
         <customTabListAdditionalFields>Provider</customTabListAdditionalFields>
-        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Provider</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>

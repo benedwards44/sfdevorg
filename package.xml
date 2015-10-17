@@ -237,5 +237,5 @@
         <members>Vote</members>
         <name>CustomObject</name>
     </types>
-    <version>30.0</version>
+    <version>34.0</version>
 </Package>
